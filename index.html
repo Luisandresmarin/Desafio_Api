@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moneda Nacional</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="trabajo">
+        <main id="principal" class="blinking-border">
+            <h1>Conversor de monedas Nacional</h1>
+            <section>
+                <div class="cantidad">
+                    <h2>Pesos CLP</h2>
+                    <input type="number" id="cantidadPesos" min="0" step="1000" placeholder="Ingrese monto">
+                </div>
+                <div class="moneda">
+                    <h3>Moneda a convertir:</h3>
+                    <select id="monedaDestino" >
+                        <option value="" disabled selected>Seleccione una moneda</option>         
+                        <option value="dolar">Dólar Observado</option>                        
+                        <option value="euro">Euro</option>
+                        <option value="uf">Unidad de Fomento (UF)</option>
+                    </select>
+                </div>
+                <div class="total">
+                    <button id="buscar">Buscar</button>
+                    <p id="resultado">Resultado: </p>
+                </div>
+            </section>
+        </main>
+        <main class="grafico">
+            <h2>Gráfico últimos 10 días</h2>
+            <canvas id="myChart"></canvas>
+        </main>
+    </nav>
+    <script src="./js/javascript.js"></script>
+</body>
+</html>
